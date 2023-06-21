@@ -7,3 +7,8 @@
 &：如果前面的语句为假则直接执行后面的语句，前面的语句可真可假 。例如： ping 127.0.0.1&whoami。
 &&：如果前面的语句为假则直接出错，也不执行后面的，前面的语句只能为真。例如： ping 127.0.0.1&&whoami。
 ```
+###### Powershell Or CMD
+```
+(dir 2>&1 *`|echo CMD);&<# rem #>echo PowerShell
+urlencode((dir 2>&1 *`|echo CMD);&<# rem #>echo PowerShell)
+```
