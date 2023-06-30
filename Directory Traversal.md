@@ -1,7 +1,10 @@
 ### Linux(../)
 ```
 /etc/passwd
-look for ssh private key
+look for ssh private key files:
+ssh-keygen --help
+[-t dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk | rsa]
+id_dsa/ecdsa/ecdsa-sk/ed25519/ed25519-sk/rsa
 ```
 ### Windows(..\\)
 ```
