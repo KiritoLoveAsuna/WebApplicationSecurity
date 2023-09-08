@@ -3,6 +3,10 @@
 .phps or .php7
 From .php to .pHP
 ```
+### 截断
+···
+filename.php%00.pdf
+···
 
 ### Powershell reverse shell
 ```
