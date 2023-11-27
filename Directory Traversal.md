@@ -24,6 +24,6 @@ url encoding
 ```
 
 ### Dictionary
-/usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt
-/usr/share/dirb/wordlists/dirb/big.txt
+/usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt  
+/usr/share/dirb/wordlists/dirb/big.txt  
 /usr/share/dirb/wordlists/dirb/common.txt
