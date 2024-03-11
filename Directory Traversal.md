@@ -34,3 +34,7 @@ url encoding
 2. dirsearch -u url -r (sometimes some path hidden behine 403 response )
 3. dirsearch -u url -t 10 --timeout=30 -w wordlist(sometimes request will timeout if thread is default 25)
 ```
+### gobuster
+```
+gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -q --no-error -u http://192.168.124.101:8080 --exclude-length 871 -t 200 -o result.txt
+```
