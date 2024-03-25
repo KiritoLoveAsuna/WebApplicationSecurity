@@ -21,6 +21,8 @@ C:\inetpub\wwwroot\web.config
 ### Evade
 ```
 url encoding
+. -> %2e
+/ -> %2f
 ```
 
 ### Dictionary
