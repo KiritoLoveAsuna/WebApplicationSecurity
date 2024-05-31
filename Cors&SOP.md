@@ -11,7 +11,7 @@ https://bar.com/analytics.js	Blocked	Different Domain
 ```
 curl -v -X OPTIONS http://192.168.154.155/exercise2
 ```
-### CSRF
+### CSRF(local test require apache2 service)
 burp traffic of add user 
 ```
 POST /webtools/control/createUserLogin HTTP/1.1
