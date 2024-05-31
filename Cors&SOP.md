@@ -1,5 +1,7 @@
 ### Same Origin Policy 
-SOP blocks JavaScript and our browsers from accessing cross-origin resources, but it does not block the outgoing requests for such resources
+SOP blocks JavaScript and our browsers from accessing cross-origin resources, but it does not block the outgoing requests for such resources、
+
+if the cookie has SameSite=Lax, the browser will not send it even if the preflight request indicates that the destination server allows credentials on CORS requests.
 ```
 URL	RESULT	REASON
 https://foo.com/myInfo	Allowed	Same Origin
@@ -12,6 +14,13 @@ https://bar.com/analytics.js	Blocked	Different Domain
 ```
 curl -v -X OPTIONS http://192.168.154.155/exercise2
 ```
+### Servers can set several headers1 to enable CORS
+···
+Access-Control-Allow-Methods: GET, POST, OPTIONS
+Access-Control-Allow-Origin: https://offensive-security.com
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Headers: X-UserId
+···
 ### CSRF(local test require apache2 service)
 burp traffic of add user 
 ```
