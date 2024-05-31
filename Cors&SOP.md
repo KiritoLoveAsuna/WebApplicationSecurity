@@ -1,4 +1,5 @@
 ### Same Origin Policy 
+>SOP blocks JavaScript and our browsers from accessing cross-origin resources, but it does not block the outgoing requests for such resources
 ```
 URL	RESULT	REASON
 https://foo.com/myInfo	Allowed	Same Origin
