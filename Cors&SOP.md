@@ -144,7 +144,7 @@ get_code();
 ```
 ### Improper domain allow list
 finding the allowed domain
-![image](https://github.com/KiritoLoveAsuna/WebApplicationSecurity/assets/38044499/6bb566fa-88c8-4489-bbca-a812e92ec071)
+![image](https://github.com/KiritoLoveAsuna/WebApplicationSecurity/assets/38044499/882aaba3-c6b4-472c-9c3b-32efb60803b8)
 ![image](https://github.com/KiritoLoveAsuna/WebApplicationSecurity/assets/38044499/ba46f78b-79d8-4cc5-b6d0-8d10ff7ef7bc)
 ```
 curl -X "OPTIONS" -i -k https://cors-sandbox/allowlist
