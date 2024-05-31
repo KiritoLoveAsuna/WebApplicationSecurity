@@ -144,6 +144,8 @@ get_code();
 ```
 ### Improper domain allow list
 finding the allowed domain
+![image](https://github.com/KiritoLoveAsuna/WebApplicationSecurity/assets/38044499/6bb566fa-88c8-4489-bbca-a812e92ec071)
+![image](https://github.com/KiritoLoveAsuna/WebApplicationSecurity/assets/38044499/ba46f78b-79d8-4cc5-b6d0-8d10ff7ef7bc)
 ```
 curl -X "OPTIONS" -i -k https://cors-sandbox/allowlist
 curl -X "OPTIONS" -i -H "Origin: http://www.offensive-security.com" -k https://cors-sandbox/allowlist
