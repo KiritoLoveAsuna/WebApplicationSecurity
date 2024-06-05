@@ -4,7 +4,7 @@ JWTs are typically comprised of three sections: header, payload, and signature. 
 
 ![image](https://github.com/KiritoLoveAsuna/WebApplicationSecurity/assets/38044499/9ca79357-5ed1-4b29-b6c4-068fd252008a)
 
-### Calculation of Signature
+### Calculation of Signature with symmetric key
 ```
 import hashlib
 import hmac
