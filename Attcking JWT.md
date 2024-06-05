@@ -17,3 +17,14 @@ signature = hmac.new(key.encode(), message.encode(), hashlib.sha256).digest()
 signature_encoded = base64.urlsafe_b64encode(signature).decode().rstrip("=")
 print(signature_encoded)
 ```
+### symmetric cryptography algorithms
+```
+Hash-based Message Authentication Code (HMAC) using SHA-256 hashing algorithm (HS256)
+HMACs with SHA-384 (HS384) or SHA-512 (HS512)
+```
+### Asymmetric cryptography algorithms
+```
+RSA (RS256)
+Elliptic Curves (ES256)
+```
+
