@@ -75,3 +75,9 @@ try:
 except jwt.PyJWTError as e:
     print("Verification failed:", str(e))
 ```
+### Symmetric JWT token without signature
+```
+1.change alg to none
+2.change role and sub to other user
+3. header.payload. = token
+```
