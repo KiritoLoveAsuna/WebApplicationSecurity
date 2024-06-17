@@ -22,6 +22,10 @@ print(signature_encoded)
 Hash-based Message Authentication Code (HMAC) using SHA-256 hashing algorithm (HS256)
 HMACs with SHA-384 (HS384) or SHA-512 (HS512)
 ```
+### Brute-force HS256 JWT token
+```
+hashcat -m 16500 -a 0 jwt.txt /usr/share/wordlists/seclists/Passwords/scraped-JWT-secrets.txt -O
+```
 ### Asymmetric cryptography algorithms
 ```
 RSA (RS256)
