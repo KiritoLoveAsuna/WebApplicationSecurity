@@ -34,6 +34,21 @@ Elliptic Curves (ES256)
 ### Obtaining public key 
 https://{yourDomain}/.well-known/jwks.json
 
+### transfer to pem from jwks
+```
+python3 generate_pem_from_jwks.py "http://api-sandbox/.well-known/jwks.json"
+
+result:
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqeo5e7UglzqFjdH48hsk
+lNFjTqpJ5qTqz0VIn2BWRfMSkWorpgv46nr9spmzKGzxtGEG25r0nki3R1KaTmtI
+lslh+C7d6FYH/7kCASeJsy27btWI1j4xyheaC5XNdxjJRg5XS8D9cZaT8/FdnkrF
+1pJHs1IJVFdHsEmK5VB6YtiYKNyor6PUxpB4UyjxyeamD3rV8Plp2efjmX367d2y
+9rJLyazJPC/uc4FjvB/v3ZDLlOTVF2tOlh6QDQFYBzeGSZaaK6m/qmAPiYgP0sCV
+HsoxoKa53VSuy1YDGKSB0Y/g5Br5dQwN0YXA7xBz7xB2OAJ//tcqoHFC3QMa7pb1
+0QIDAQAB
+-----END PUBLIC KEY-----
+```
 ### Impersonating user of JWT token without signature
 ```
 1.change alg to none
