@@ -79,7 +79,7 @@ Blue teamers and developers are usually quick to blacklist file extensions, but 
 
 This file isn't directly an RCE vector, but it does allow for the definition of new valid PHP extensions, which can then be uploaded to the server (as they are not blacklisted).
 
-An example .htaccess file that can be used to add a new PHP extension is: 
+An example .htaccess file that can be used to add a new PHP extension is:  
 .hataccess 
 ```
 AddType application/x-httpd-php .evil
