@@ -5,7 +5,7 @@ From .php to .pHP
 ```
 For Windows
 ```
-1.jsp.
+test.jsp.
 ```
 ### 截断
 ```
