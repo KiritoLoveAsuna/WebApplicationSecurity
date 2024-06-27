@@ -31,6 +31,8 @@ hashcat -m 16500 -a 0 jwt.txt /usr/share/wordlists/seclists/Passwords/scraped-JW
 RSA (RS256)
 Elliptic Curves (ES256)
 ```
+### Obtaining public key 
+https://{yourDomain}/.well-known/jwks.json
 
 ### Impersonating user of JWT token without signature
 ```
