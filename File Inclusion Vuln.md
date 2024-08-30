@@ -1,3 +1,9 @@
+### Trigger Requirement
+![image](https://github.com/user-attachments/assets/fc1b4b1a-d788-4a59-9b69-664c1f0dfd10)
+```
+allow_url_open open
+```
+
 ### Contaminating Log Files to LFI
 ```
 1.
