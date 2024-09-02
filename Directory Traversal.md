@@ -27,6 +27,7 @@ url encoding
 
 ### Dictionary
 >Remember to add machine name to the directory list
+
 /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt  
 /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt  
 /usr/share/dirb/wordlists/big.txt  
