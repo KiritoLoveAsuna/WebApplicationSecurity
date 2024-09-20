@@ -5,6 +5,9 @@ SHOW GRANTS FOR 'root'@'localhost';
 
 Show current user:
 SELECT CURRENT_USER();
+
+Check write permission:
+show global variables like 'secure%';
 ```
 ### default port
 80
