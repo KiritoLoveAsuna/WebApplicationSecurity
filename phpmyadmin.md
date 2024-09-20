@@ -1,3 +1,11 @@
+### SQL
+```
+Check permissions:
+SHOW GRANTS FOR 'root'@'localhost';
+
+Show current user:
+SELECT CURRENT_USER();
+```
 ### default port
 80
 ### default url
