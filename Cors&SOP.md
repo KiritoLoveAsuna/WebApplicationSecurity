@@ -15,12 +15,12 @@ https://bar.com/analytics.js	Blocked	Different Domain
 curl -v -X OPTIONS http://192.168.154.155/exercise2
 ```
 ### Servers can set several headers1 to enable CORS
-···
+```
 Access-Control-Allow-Methods: GET, POST, OPTIONS
 Access-Control-Allow-Origin: https://offensive-security.com
 Access-Control-Allow-Credentials: true
 Access-Control-Allow-Headers: X-UserId
-···
+```
 ### CSRF(local test require apache2 service)
 burp traffic of add user 
 ```
