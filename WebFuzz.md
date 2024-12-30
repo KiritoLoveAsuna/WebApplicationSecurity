@@ -11,4 +11,15 @@ wfuzz -c -z file,/usr/share/seclists/Fuzzing/5-digits-00000-99999.txt --hc 404 -
 ffuf -u "http://flight.htb" -H "Host: FUZZ.flight.htb" -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -c -t 50 -fs 7069
 
 Then add subdomain entry to /etc/hosts
+
+Vhosts Configuration:
+/etc/apache2/sites-available/your_domain_1.conf
+<VirtualHost *:80>
+  ...
+    ServerAdmin admin@your_domain_1
+    ServerName your_domain_1
+    ServerAlias www.your_domain_1
+    DocumentRoot /var/www/html
+    ...
+</VirtualHost>
 ```
