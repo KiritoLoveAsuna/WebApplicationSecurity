@@ -19,7 +19,10 @@ Vhosts Configuration:
     ServerAdmin admin@your_domain_1
     ServerName your_domain_1
     ServerAlias www.your_domain_1
-    DocumentRoot /var/www/html
+    DocumentRoot /var/www/your_domain_1/public_html
+    ...
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
     ...
 </VirtualHost>
 ```
