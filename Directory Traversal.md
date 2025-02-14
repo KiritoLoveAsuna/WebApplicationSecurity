@@ -23,6 +23,7 @@ C:\inetpub\wwwroot\web.config
 url encoding
 . -> %2e
 / -> %2f
+" " -> +
 ```
 
 ### Dictionary
