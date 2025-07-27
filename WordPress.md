@@ -3,7 +3,10 @@
 sudo wpscan --url url -e vp,u
 sudo wpscan --url url --usernames admin --passwords rockyou.txt
 ```
-
+enum users
+```
+sudo wpscan --url https://ip/ --enumerate u
+```
 
 ### Upload Plugin to RCE
 ```
