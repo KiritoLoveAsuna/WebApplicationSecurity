@@ -1,6 +1,6 @@
 ### Enum
 ```
-sudo wpscan --url url -e vp,u
+sudo wpscan --url url
 sudo wpscan --url url --usernames admin --passwords rockyou.txt
 ```
 enum users
