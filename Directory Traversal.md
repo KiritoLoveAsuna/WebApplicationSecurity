@@ -41,5 +41,17 @@ url encoding
 ```
 ### gobuster
 ```
-gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -q --no-error -u http://192.168.124.101:8080 --exclude-length 871 -t 200 -o result.txt
+gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -q --no-error -u http://192.168.124.101:8080 --exclude-length 871 -t 100
 ```
+comprehensive scan
+```
+gobuster -u url -w wordlist -t 100 --no-error -x php,asp,aspx,jsp,html,htm,js,css,txt,log,bak,conf,ini,env,json,yaml,yml,xml,cgi,zip,tar,gz,rar,7z,sql,db,cfg,old,backup,htpasswd,passwd,htaccess,ts,py,rb,java,pdf,doc,docx,xls,xlsx,ppt,pptx
+```
+
+
+
+
+
+
+
+
