@@ -2,3 +2,4 @@
 ```
 curl -s '<URL>/favicon.ico' | base64 | python3 -c 'import mmh3,sys;print(mmh3.hash(sys.stdin.buffer.read()))'
 ```
+### Crt.sh
