@@ -33,6 +33,7 @@ url encoding
 /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt  
 /usr/share/dirb/wordlists/big.txt  
 /usr/share/dirb/wordlists/common.txt
+/usr/share/seclists/Discovery/Web-Content/raft-large-words.txt
 ### Dirsearch
 ```
 1. dirsearch -u url
