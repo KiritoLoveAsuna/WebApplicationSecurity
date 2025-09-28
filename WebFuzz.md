@@ -8,8 +8,9 @@ wfuzz -c -z file,/usr/share/seclists/Fuzzing/5-digits-00000-99999.txt --hc 404 -
 ```
 ### Enumerating Vhosts
 ```
-ffuf -u "http://flight.htb" -H "Host: FUZZ.flight.htb" -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -c -t 50 -fs 7069
-gobuster vhost -u https://example.com -t 50 -w /wordlists/Discovery/DNS/subdomains-top1million-5000.txt 
+ffuf -u "http://flight.htb" -H "Host: FUZZ.flight.htb" -w dic -c -t 50 -fs 7069(filter response size)
+ffuf -u "http://flight.htb" -H "Host: FUZZ.flight.htb" -w dic -c -t 50 -fw 20(filter words)
+ffuf -u "http://flight.htb" -H "Host: FUZZ.flight.htb" -w dic -c -t 50 -fc 20(filter status codes)
 
 Then add subdomain entry to /etc/hosts
 
