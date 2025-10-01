@@ -17,6 +17,8 @@ IIS Web Server:
 C:\inetpub\logs\LogFiles\W3SVC1\
 C:\inetpub\wwwroot\web.config
 ```
+### .htpasswd
+>.htpasswd is a flat-file used to store usernames and password. This file is generally used by the web server software like Apache, Nginx, etc. in order to verify the users via HTTP basic authentication.
 
 ### Evade
 ```
