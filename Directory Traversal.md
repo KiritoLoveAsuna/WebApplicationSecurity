@@ -2,13 +2,21 @@
 ```
 /etc/passwd
 
+
+SSH Private Key:
 look for ssh private key files:
 ssh-keygen --help
 [-t dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk | rsa]
 id_dsa/ecdsa/ecdsa-sk/ed25519/ed25519-sk/rsa
 
-if needed passphrase, ssh2john id_ecdsa > id_ecdsa.hash use john
+Apache2 Main Configuration File:
+/etc/apache2/apache2.conf
+
+Default Apache Virtual Host Configuration File:
+/etc/apache2/sites-available|enabled/000-default.conf
 ```
+###### .htpasswd
+>.htpasswd is a flat-file used to store usernames and password. This file is generally used by the web server software like Apache, Nginx, etc. in order to verify the users via HTTP basic authentication.
 ### Windows(..\\)
 ```
 C:\Windows\System32\drivers\etc\hosts
@@ -16,9 +24,14 @@ C:\Windows\System32\drivers\etc\hosts
 IIS Web Server:
 C:\inetpub\logs\LogFiles\W3SVC1\
 C:\inetpub\wwwroot\web.config
+
+Apache2 Main Configuration File:
+\apache_installation_folder\conf\httpd.conf
+
+Default Apache Virtual Host Configuration File:
+\apache_installation_folder\conf\httpd-vhosts.conf
 ```
-### .htpasswd
->.htpasswd is a flat-file used to store usernames and password. This file is generally used by the web server software like Apache, Nginx, etc. in order to verify the users via HTTP basic authentication.
+
 
 ### Evade
 ```
