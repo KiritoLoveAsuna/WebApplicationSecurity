@@ -1,4 +1,9 @@
 https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection
+
+# Login Sql Query
+```
+select * from logins where username = 'admin' and password = 'admin';
+```
 # Categories
 ### Error-Based
 
