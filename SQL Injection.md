@@ -13,7 +13,12 @@ select * from logins where (username = 'admin' and id > 1) and password = 'admin
 ### Error-Based
 
 ### Union-Based
+```
+' order by 1 -- -
+```
+>Note: When filling other columns with junk data, we must ensure that the data type matches the columns data type, otherwise the query will return an error. For the sake of simplicity, we will use numbers as our junk data, which will also become handy for tracking our payloads positions, as we will discuss later.
 
+>Tip: For advanced SQL injection, we may want to simply use 'NULL' to fill other columns, as 'NULL' fits all data types.
 
 ### Blind Sql Injection
 ###### Time-Based
