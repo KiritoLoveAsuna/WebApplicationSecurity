@@ -1,6 +1,6 @@
 https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection
 
-# Login Sql Query
+# Common Login Sql Query
 ```
 select * from logins where username = 'admin' and password = 'admin';
 select * from logins where (username = 'admin' and id > 1) and password = 'admin';
