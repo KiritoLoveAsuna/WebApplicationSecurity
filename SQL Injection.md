@@ -3,6 +3,7 @@ https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection
 # Login Sql Query
 ```
 select * from logins where username = 'admin' and password = 'admin';
+select * from logins where (username = 'admin' and id > 1) and password = 'admin';
 ```
 # Note
 >Note: In SQL, using two dashes only is not enough to start a comment. So, there has to be an empty space after them, so the comment starts with (-- ), with a space at the end. This is sometimes URL encoded as (--+), as spaces in URLs are encoded as (+). To make it clear, we will add another (-) at the end (-- -), to show the use of a space character.
