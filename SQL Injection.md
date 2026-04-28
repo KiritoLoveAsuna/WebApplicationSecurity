@@ -8,3 +8,4 @@ https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection
 ### Blind Sql Injection
 ###### Time-Based
 ###### Boolean-Based
+###### Out of Band 
