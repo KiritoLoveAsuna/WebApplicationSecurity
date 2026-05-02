@@ -16,8 +16,11 @@
 # Vhost
 ### Vhost Config Location
 ```
-Vhosts Configuration:
+/etc/nginx/sites-available/<site>
 /etc/apache2/sites-available/your_domain_1.conf
+```
+```
+Vhosts Configuration:
 <VirtualHost *:80>
   ...
     ServerAdmin admin@your_domain_1
