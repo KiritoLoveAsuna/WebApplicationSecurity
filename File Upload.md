@@ -1,4 +1,5 @@
 ### File Extensions
+need to use echo "hello" to determine which extension can execute code
 ```
 .jpeg.php
 .jpg.php
