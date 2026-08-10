@@ -22,6 +22,8 @@
 .php%00.jpg
 .php\x00.jpg
 .inc
+.phps or .php7
+From .php to .pHP
 ```
 For Windows
 ```
