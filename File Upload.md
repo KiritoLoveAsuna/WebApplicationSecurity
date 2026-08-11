@@ -120,3 +120,9 @@ python3 CVE-2018-10583.py >> bad.odt
 Upload bad.odt 
 sudo responder -I tun0 -A 
 ```
+### Vulnerable Web Server Configurations
+```
+<FilesMatch ".+\.ph(ar|p|tml)">
+    SetHandler application/x-httpd-php
+</FilesMatch>
+```
