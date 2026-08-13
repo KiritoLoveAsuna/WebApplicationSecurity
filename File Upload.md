@@ -30,7 +30,18 @@ For Windows
 ```
 test.jsp.
 ```
-### 截断
+### Character Injection
+```
+%20
+%0a
+%00
+%0d0a
+/
+.\
+.
+…
+:
+```
 ```
 for char in '%20' '%0a' '%00' '%0d0a' '/' '.\\' '.' '…' ':'; do
     for ext in '.php' '.phps'; do
