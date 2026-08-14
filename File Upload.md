@@ -1,9 +1,6 @@
 ### File Extensions
 need to use echo "hello" to determine which extension can execute code
 ```
-.jpeg.php
-.jpg.php
-.png.php
 .php
 .php3
 .php4
@@ -16,15 +13,12 @@ need to use echo "hello" to determine which extension can execute code
 .pgif
 .phtml
 .phtm
-.php%00.gif
-.php\x00.gif
-.php%00.png
-.php\x00.png
-.php%00.jpg
-.php\x00.jpg
 .inc
-.phps or .php7
-From .php to .pHP
+.phps
+.phP
+.Php
+.PHp
+.pHP
 ```
 For Windows
 ```
