@@ -144,6 +144,10 @@ sudo responder -I tun0 -A
 ### XML payload
 ```
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE svg [ <!ENTITY xxe SYSTEM "php://filter/convert.base64-encode/resource=index.php"> ]>
-<svg>&xxe;</svg>
+<!DOCTYPE svg [
+  <!ENTITY xxe "XXE_PARSER_TEST_7F21">
+]>
+<svg xmlns="http://www.w3.org/2000/svg">
+  <text>&xxe;</text>
+</svg>
 ```
