@@ -20,13 +20,12 @@ need to use echo "hello" to determine which extension can execute code
 .PHp
 .pHP
 ```
-### Web all extensions
->https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/web-all-content-types.txt
-
 For Windows
 ```
 test.jsp.
 ```
+### Web all extensions
+>https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/web-all-content-types.txt
 ### Character Injection
 ```
 %20
