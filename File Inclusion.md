@@ -5,7 +5,8 @@ allow_url_open open
 ```
 
 ### Contaminating Log Files to LFI
-Prerequsites
+Prerequsites  
+access to /var/log/apache2/access.log
 ```
 /etc/apache2/apache2.conf
 
