@@ -12,3 +12,5 @@ Mode                LastWriteTime         Length Name
 -a----        9/18/2017   1:43 PM           2846 CEH.kdbx  
 ```
 ![image](https://github.com/user-attachments/assets/314590f5-7dcb-4f7d-bd2b-10914578d8f3)
+### Command Execution
+https://juejin.cn/post/7024025078396370975
