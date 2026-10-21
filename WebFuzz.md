@@ -14,6 +14,7 @@ ffuf -w colors-list.txt:ANSWER -w supplieremails.txt:EMAIL -u http://154.57.164.
 ffuf -u "http://flight.htb" -H "Host: FUZZ.flight.htb" -w dic -c -t 50 -fs 7069(filter response size)
 ffuf -u "http://flight.htb" -H "Host: FUZZ.flight.htb" -w dic -c -t 50 -fw 20(filter words)
 ffuf -u "http://flight.htb" -H "Host: FUZZ.flight.htb" -w dic -c -t 50 -fc 20(filter status codes)
+ffuf -u http://enigma.htb/ -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-110000.txt -H "Host: FUZZ.enigma.htb" -fs 154
 
 Then add subdomain entry to /etc/hosts
 
