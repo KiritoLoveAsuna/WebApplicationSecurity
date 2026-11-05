@@ -51,3 +51,6 @@ decrypt the encrypted file using the corresponding private key
 ```
 openssl pkeyutl -decrypt -inkey rsa.pem -in msg.enc -pkeyopt rsa_padding_mode:oaep -pkeyopt rsa_oaep_md:sha256 > decrypted.txt
 ```
+```
+openssl pkeyutl -decrypt -inkey rsa.pem -in flag.enc
+```
