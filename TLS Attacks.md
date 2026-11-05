@@ -27,3 +27,11 @@ PEM to PKCS#7
 ```
 openssl crl2pkcs7 -nocrl -certfile hackthebox.pem -out hackthebox.p7
 ```
+download the certificate of any web server
+```
+openssl s_client -connect hackthebox.com:443 </dev/null 2>/dev/null | openssl x509 > hackthebox.pem
+```
+Creating a Self-Signed Certificate
+```
+openssl req -x509 -newkey rsa:4096 -keyout key.pem -out selfsigned.pem -sha256 -days 365 -addext "subjectAltName=DNS:hackthebox.com"
+```
