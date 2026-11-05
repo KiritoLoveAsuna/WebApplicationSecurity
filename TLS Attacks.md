@@ -35,3 +35,19 @@ Creating a Self-Signed Certificate
 ```
 openssl req -x509 -newkey rsa:4096 -keyout key.pem -out selfsigned.pem -sha256 -days 365 -addext "subjectAltName=DNS:hackthebox.com"
 ```
+create new key pair
+```
+openssl genrsa -out rsa.pem 2048
+```
+extract public key
+```
+openssl rsa -in rsa.pem -pubout > rsa_pub.pem
+```
+use the extracted public key to encrypt a file
+```
+openssl pkeyutl -encrypt -inkey rsa_pub.pem -pubin -pkeyopt rsa_padding_mode:oaep -pkeyopt rsa_oaep_md:sha256 -in msg.txt -out msg.enc
+```
+decrypt the encrypted file using the corresponding private key
+```
+openssl pkeyutl -decrypt -inkey rsa.pem -in msg.enc -pkeyopt rsa_padding_mode:oaep -pkeyopt rsa_oaep_md:sha256 > decrypted.txt
+```
