@@ -17,3 +17,13 @@
 <img width="1416" height="175" alt="image" src="https://github.com/user-attachments/assets/3bbbe24a-465a-4fe0-b5a8-744f6cf65b0e" />
 
 >When accessing a website, the browser validates the whole certificate chain. If any certificate in the chain is invalid or insecure, the browser displays a warning to the user. The root CA's identity is checked against the operating system's or web browser's trust store, a curated list of trusted root CAs maintained by vendors.
+
+# openssl
+PEM to DER
+```
+openssl x509 -outform der -in hackthebox.pem -out hackthebox.der
+```
+PEM to PKCS#7
+```
+openssl crl2pkcs7 -nocrl -certfile hackthebox.pem -out hackthebox.p7
+```
