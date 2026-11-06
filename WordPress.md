@@ -3,7 +3,7 @@
 sudo wpscan --url url
 sudo wpscan --url url --usernames admin --passwords rockyou.txt
 --disable-tls-checks
--force
+--force
 ```
 enum users
 ```
